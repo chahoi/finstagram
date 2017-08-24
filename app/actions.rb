@@ -7,7 +7,7 @@ def humanized_time_ago(time_ago_in_minutes)
 end
 
 get '/' do
-  post_shark = {
+  @post_shark = {
     username: "sharky_j",
     avatar_url: "http://naserca.com/images/sharky_j.jpg",
     photo_url: "http://naserca.com/images/shark.jpg",
@@ -16,11 +16,11 @@ get '/' do
     comment_count: 1,
     comments: [{
       username: "sharky_j",
-      text: "Out for the long weekend... too embarrassed to show y'all the beach bod!"
+      text: "Out for the long weekend... too embarrassed to show y'all the beach bod!", 
     }]
   }
 
-  post_whale = {
+  @post_whale = {
     username: "kirk_whalum",
     avatar_url: "http://naserca.com/images/kirk_whalum.jpg",
     photo_url: "http://naserca.com/images/whale.jpg",
@@ -29,11 +29,12 @@ get '/' do
     comment_count: 1,
     comments: [{
       username: "kirk_whalum",
-      text: "#weekendvibes"
+      text: "#weekendvibes",
+      text1: "It was a lot of fun and entertaining!!!"
     }]
   }
 
-  post_marlin = {
+  @post_marlin = {
     username: "marlin_peppa",
     avatar_url: "http://naserca.com/images/marlin_peppa.jpg",
     photo_url: "http://naserca.com/images/marlin.jpg",
@@ -46,7 +47,8 @@ get '/' do
     }]
   }
   
-  [post_shark, post_whale, post_marlin].to_s
+  
+  erb :index
 end
     
     

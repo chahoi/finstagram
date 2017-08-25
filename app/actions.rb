@@ -12,7 +12,7 @@ get '/' do
     avatar_url: "http://naserca.com/images/sharky_j.jpg",
     photo_url: "http://naserca.com/images/shark.jpg",
     humanized_time_ago: humanized_time_ago(15),
-    like_count: 0,
+    like_count: 2,
     comment_count: 1,
     comments: [{
       username: "sharky_j",

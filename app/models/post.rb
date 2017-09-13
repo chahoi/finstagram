@@ -24,5 +24,9 @@ class Post < ActiveRecord::Base
         self.comments.size
     end
     
+    def car_beep
+        return "beep-beep"
+    end
+    
     
 end
